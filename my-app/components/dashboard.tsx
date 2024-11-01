@@ -29,6 +29,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 import Link from "next/link";
+import { PersonIcon } from "@radix-ui/react-icons";
 
 type CustomFormData = {
 	name: string;
@@ -100,27 +101,27 @@ export function DashboardComponent() {
 						className="w-full justify-start text-primary-foreground hover:bg-secondary"
 						onClick={() => setSidebarOpen(false)}
 					>
-						<BarChart2 className="mr-2 h-4 w-4" />
-						Dashboard
+						<PersonIcon className="mr-2 h-4 w-4" />
+						Cadastrar cliente
 					</Button>
-					<Button
+					{/* <Button
 						variant="ghost"
 						className="w-full justify-start text-primary-foreground hover:bg-secondary"
 						onClick={() => setSidebarOpen(false)}
 					>
 						<FileText className="mr-2 h-4 w-4" />
 						Processos
-					</Button>
-					<Button
+					</Button> */}
+					{/* <Button
 						variant="ghost"
 						className="w-full justify-start text-primary-foreground hover:bg-secondary"
 						onClick={() => setSidebarOpen(false)}
 					>
 						<Calendar className="mr-2 h-4 w-4" />
 						Agenda
-					</Button>
+					</Button> */}
 				</nav>
-				<Button className="bg-blue-600 w-full  " asChild>
+				<Button className="bg-blue-600 w-full hover:bg-blue-500 " asChild>
 					<Link href={"https://trello.com/b/9CDxGBa6/vendas-e-juridico"} target="_blank">
 						<div className="flex items-center gap-2">
 							<span>Acessar o Trello</span> <Scale className="w-7 h-7" />
@@ -133,8 +134,8 @@ export function DashboardComponent() {
 			<div className="flex-1 flex flex-col overflow-hidden">
 				{/* Header */}
 				<header className="bg-white shadow-sm border-b border-gray-200">
-					<div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-						<h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1>
+					<div className=" py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+						<h1 className="text-2xl font-semibold text-gray-900">Cadastro de clientes</h1>
 						<div className="flex items-center">
 							<Button variant="ghost" size="icon" className="mr-2">
 								<Bell className="h-5 w-5" />
@@ -161,7 +162,7 @@ export function DashboardComponent() {
 				{/* Main */}
 				<main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50">
 					<div className="container mx-auto px-6 py-8">
-						<div className="grid gap-6 mb-8 md:grid-cols-2 lg:grid-cols-4">
+						{/* <div className="grid gap-6 mb-8 md:grid-cols-2 lg:grid-cols-4">
 							<Card>
 								<CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
 									<CardTitle className="text-sm font-medium">
@@ -217,7 +218,7 @@ export function DashboardComponent() {
 									<p className="text-xs text-muted-foreground">+3 este mês</p>
 								</CardContent>
 							</Card>
-						</div>
+						</div> */}
 
 						<div className="mt-8">
 							<Tabs defaultValue="cadastro" className="w-full">
@@ -225,8 +226,8 @@ export function DashboardComponent() {
 									<TabsTrigger value="cadastro">
 										Cadastro de Cliente
 									</TabsTrigger>
-									<TabsTrigger value="calendario">Calendário</TabsTrigger>
-									<TabsTrigger value="clientes">Clientes Recentes</TabsTrigger>
+									{/* <TabsTrigger value="calendario">Calendário</TabsTrigger> */}
+									{/* <TabsTrigger value="clientes">Clientes Recentes</TabsTrigger> */}
 								</TabsList>
 								<TabsContent value="cadastro">
 									<Card>
@@ -415,7 +416,7 @@ export function DashboardComponent() {
 				<footer className="bg-white shadow-md mt-auto">
 					<div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
 						<p className="text-center text-sm text-gray-500">
-							© 2023 Escritório de Advocacia Silva & Associados. Todos os
+							© 2024 Advocacia Dr. Tedeschi. Todos os
 							direitos reservados.
 						</p>
 					</div>
